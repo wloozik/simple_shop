@@ -1,17 +1,17 @@
 .row
-  .col-12
-    h3 Список товаров:
-    - @products.each do |product|
+  h3 Список товаров:
+  - @products.each do |product|
+    .col-md-4
       .product
         .product-photo
           = image_tag(product.photo.url, size: '120x120')
         .product-info
           p
             span.header Название:
-            span= product.name
+            span= link_to product.name, product_path(product)
           p
-            span.header Описание:
-            span= product.description
+            span.header Стоимость:
+            span= product.price
           p
             span.header Количество:
             span= product.quantity
