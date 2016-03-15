@@ -1,0 +1,22 @@
+.row
+  .col-md-12
+    h3 Корзина
+    table.table
+      thead
+        th Наименование товара
+        th Количество
+        th Цена
+        th Стоимость
+        th
+      tbody
+        - @cart.cart_items.each do |item|
+          tr
+            td= item.product.name
+            td= item.quantity
+            td= item.product.price
+            td= item.cost
+            td
+              = link_to 'Убрать', cart_item_path(item), method: :delete, data: { confirm: 'Вы уверены?'}
+        tr
+          td colspan=4 Всего
+          td= @cart.cart_items.map(&:cost).reduce(&:+)
