@@ -1,0 +1,21 @@
+.logo, .title, .profile {
+  display: inline-block;
+}
+
+.title {
+  padding-left: 20px;
+  vertical-align: middle;
+  a {
+    color: black;
+    text-decoration: none;
+  }
+}
+
+.profile {
+  float: right;
+  vertical-align: middle;
+  margin-top: 50px;
+  a {
+    margin-left: 10px;
+  }
+}

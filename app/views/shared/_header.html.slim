@@ -1,0 +1,12 @@
+.logo
+  = image_tag('logo.png', size: '120x120')
+.title
+  = link_to root_path do
+    h1 Simple Shop
+.profile
+  - if current_user
+    = current_user.email
+    = link_to 'Выйти', destroy_user_session_path, method: :delete
+  - else
+    = link_to 'Войти', new_user_session_path
+    = link_to 'Регистрация', new_user_registration_path

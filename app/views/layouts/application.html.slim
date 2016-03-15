@@ -8,4 +8,12 @@ html
   = csrf_meta_tags
 
 body
-  = yield
+  .page-wrap
+    .container
+      .row
+        = render 'shared/header'
+      = yield
+  footer
+    hr
+    .container
+      = render 'shared/footer'

@@ -1,0 +1,13 @@
+.product {
+  min-width: 120px;
+  .product-photo, .product-info {
+    float: left;
+    margin-left: 10px;
+  }
+  .product-info {
+    span.header {
+      font-weight: bold;
+      margin-right: 10px; 
+    }
+  }
+}
