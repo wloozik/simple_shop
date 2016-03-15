@@ -1,0 +1,9 @@
+h3 Список товаров:
+- @products.each do |product|
+  .product
+    .product-photo
+      = image_tag(product.photo.url, size: '120x120')
+    .product-info
+      p= product.name
+      p= product.description
+      p= product.quantity

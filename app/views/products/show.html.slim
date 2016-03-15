@@ -1,0 +1,10 @@
+.back-link
+  = link_to 'Назад к списку товаров', root_path
+
+.product
+  .product-photo
+    = image_tag(@product.photo.url, size: '120x120')
+  .product-info
+    p= @product.name
+    p= @product.description
+    p= @product.quantity

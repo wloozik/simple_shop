@@ -1,3 +1,4 @@
+# Класс модели пользователя
 class User < ActiveRecord::Base
 
   # Модули devise
