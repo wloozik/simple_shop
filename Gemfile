@@ -13,6 +13,7 @@ gem 'bootstrap-sass'
 gem 'jquery-rails'
 # Toolbox
 gem 'devise'
+gem 'devise-i18n'
 gem 'kaminari'
 gem 'paperclip'
 
@@ -24,4 +25,5 @@ group :development do
   gem 'quiet_assets'
   gem 'better_errors'
   gem 'rubocop', '~> 0.34.2', require: false
+  gem 'letter_opener'
 end
