@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  namespace :admin do
+    devise_for :admins
+    resources :products
+    root "products#index"
+  end
+
   devise_for :users
 
   resources :products, only: [:index, :show]

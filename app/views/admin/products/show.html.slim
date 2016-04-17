@@ -1,0 +1,20 @@
+.row
+  .col-md-12
+    .back-link
+      = link_to 'Назад к списку товаров', admin_root_path
+
+  .col-md-12
+    .product
+      h2= @product.name
+      .product-photo
+        = image_tag(@product.photo.url, size: '300x300')
+      .product-info
+        p
+          span.header Описание
+          span= @product.description
+        p
+          span.header Количество на складе
+          span= @product.quantity
+        p
+          span.header Стоимость
+          span= @product.price

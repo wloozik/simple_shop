@@ -1,0 +1,25 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.blink {
+  opacity: 0;
+  margin-right: 10px;
+}
+
+tr:hover {
+  .blink {
+    opacity: 1;
+  }
+}
+
+.navbar {
+  border-radius: 0;
+}
+
+.field_with_errors {
+  .form-control {
+    border-color: red;
+  }
+}
+
+@import 'parts/products';

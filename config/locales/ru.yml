@@ -1,0 +1,12 @@
+ru:
+  activerecord:
+    errors:
+      messages:
+        blank: Отсутствует
+    attributes:
+      product:
+        name: Наименование
+        description: Описание
+        quantity: Количество
+        price: Цена
+        photo: Фото
