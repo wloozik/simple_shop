@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 
 # Core
 gem 'rails', '4.2.4'
-gem 'sqlite3'
 gem 'slim'
 gem 'thin'
 # Assets
@@ -18,6 +17,7 @@ gem 'kaminari'
 gem 'paperclip'
 
 group :development do
+  gem 'sqlite3'
   gem 'awesome_print'
   gem 'byebug'
   gem 'pry-rails'
@@ -26,4 +26,8 @@ group :development do
   gem 'better_errors'
   gem 'rubocop', '~> 0.34.2', require: false
   gem 'letter_opener'
+end
+
+group :production do
+  gem 'pg'
 end
