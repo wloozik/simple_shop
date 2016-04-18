@@ -11,8 +11,27 @@ body
   .page-wrap
     .container
       .row
-        = render 'shared/header'
-      = yield
+        /= render 'shared/header'
+        .logo
+          a href="#"
+            img src="img/logo.png"
+        .top-menu
+          ul
+            li.menuactiv
+              a href="#"  ГЛАВНАЯ
+            li
+              a href="#"  О ПРЕДПРИЯТИИ
+            li
+              a href="#" АРХИВ ДОКУМЕНТОВ
+                ul
+                  li
+                    a href="#" СВИДЕТЕЛЬСТВА
+                      a href="#" СЕРТИФИКАТЫ
+                li
+                  a href="#" ГАЛЕРЕЯ ОБЪЕКТОВ
+                li.menuimg
+                  a href="#" ОБРАТНАЯ СВЯЗЬ
+      /= yield
   footer
     hr
     .container

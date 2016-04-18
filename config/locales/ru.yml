@@ -3,6 +3,7 @@ ru:
     errors:
       messages:
         blank: Отсутствует
+        not_a_number: Не число
     attributes:
       product:
         name: Наименование

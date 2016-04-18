@@ -7,4 +7,5 @@ class Product < ActiveRecord::Base
 
   # Проверяет что при создании товара указано имя, описание итд
   validates :name, :description, :quantity, :price, presence: true
+  validates :quantity, :price, numericality: { only_integer: true }
 end

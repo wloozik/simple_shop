@@ -19,3 +19,104 @@ footer, .page-wrap:after {
 
 @import 'parts/header';
 @import 'parts/products';
+
+* {
+    padding: 0;
+    margin: auto;
+}
+
+body {
+    background-color: #bababa;
+}
+
+.logo {
+    position: relative;
+    top: 0;
+    left: 0;
+    float: left;
+}
+
+.page {
+    width: 1170px;
+    margin: auto;
+    background-color: #fff;
+    height: 1000px;
+    position: relative;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.top-menu {
+    width: 1170px;
+    background-color: #000;
+    margin: auto;
+    position: relative;
+    font-family: roboto;
+    font-size: 12px;
+    height: 80px;
+    text-align: right;
+}
+
+.top-menu ul {
+    padding: 0;
+    margin: 0;
+}
+
+.top-menu li {
+    list-style: none;
+    /*Убираем маркер*/
+    display: inline-block;
+    /*Выстраиваем пункты в ряд*/
+    position: relative;
+}
+
+.top-menu li a:hover {
+    color: #eb0445;
+}
+
+.top-menu li a {
+    color: #fff;
+    /*Цвет шрифта в пункте*/
+    padding: 32px 7px;
+    /*Отступы для пункта*/
+    text-decoration: none;
+    /*Убираем подчеркивание*/
+    display: block;
+    width: 150px;
+}
+
+.top-menu li ul {
+    display: none;
+    /*Прячем выпадающее меню*/
+    position: absolute;
+    width: 150px;
+    /*Ширина выпадающего меню*/
+    padding-top: 0px;
+    /*Отступ сверху у выпадающего меню*/
+    margin: 0;
+    padding: 0;
+}
+
+.top-menu li:hover ul {
+    display: block;
+    /*Показываем выпадающее меню при наведение*/
+    left: 0px;
+    margin: auto;
+    padding: 0;
+    background-color: #000;
+    width: 200px;
+}
+
+.menuactive {
+    color: #eb0445;
+}
+
+.menuimg {
+    width: 192px;
+    height: 98px;
+    position: relative;
+    background-image: url(img/menu-element.png);
+}
+
+.menuimg li a {
+    margin: auto;
+}
