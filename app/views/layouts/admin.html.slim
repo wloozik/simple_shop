@@ -13,5 +13,7 @@ body
       .navbar-header
         a.navbar-brand href="#{admin_root_path}"
           = image_tag('logo.png', size: '20x20')
+      ul.nav.navbar-nav.navbar-right style='color: white;'
+        = current_admin.email
   .container
     = yield
