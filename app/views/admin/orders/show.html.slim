@@ -1,0 +1,19 @@
+.row
+  .col-md-12
+    h3= "Заказ №#{@order.id}"
+  .col-md-12
+    table.table
+      thead
+        th Товар
+        th Цена
+        th Количество
+      tbody
+        - @order.order_items.each do |item|
+          tr
+            td= item.product.name
+            td= item.product.price
+            td= item.quantity
+  .col-md-12
+      = form_for @order, url: admin_order_path(@order), method: :put do |form|
+        = form.hidden_field :status, value: :complited
+        = form.submit 'Выполнить заказ', class: 'btn btn-success'
