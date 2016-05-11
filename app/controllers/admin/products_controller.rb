@@ -1,8 +1,6 @@
 # Контроллер для товаров в админке
 class Admin::ProductsController < AdminController
 
-  # before_action :authenticate_admin!
-
   def index
     # Получили список всех товаров и сохранили его в переменную для доступа из вьюхи
     @products = Product.all
