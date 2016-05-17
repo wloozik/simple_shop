@@ -5,6 +5,10 @@ ru:
         blank: Отсутствует
         not_a_number: Не число
     attributes:
+      user:
+        name: Имя
+        phone: Телефон
+        address: Адрес
       product:
         name: Наименование
         description: Описание

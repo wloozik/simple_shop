@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     resources :products
     resources :orders
     resources :categories
+    resources :users, only: [ :index, :show ]
     root "products#index"
   end
 
