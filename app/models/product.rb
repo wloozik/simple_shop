@@ -9,4 +9,6 @@ class Product < ActiveRecord::Base
   validates :name, :description, :quantity, :price, presence: true
   validates :quantity, numericality: { only_integer: true }
   validates :price, numericality: true
+
+  has_and_belongs_to_many :categories
 end

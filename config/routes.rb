@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
   devise_for :admins
+
   namespace :admin do
     resources :products
     resources :orders
+    resources :categories
     root "products#index"
   end
 
