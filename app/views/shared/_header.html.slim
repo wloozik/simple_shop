@@ -2,8 +2,9 @@
   = image_tag('logo.png', size: '120x120')
 .title
   = link_to root_path do
-    h1 Simple Shop
+    h1 Пышечка
 .profile
+  a href='./contacts.html' Контакты
   - if current_user
     = current_user.email
     = link_to 'Корзина', cart_path

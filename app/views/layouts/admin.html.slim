@@ -1,7 +1,7 @@
 doctype html
 html
  head
-  title SimpleShop Admin
+  title Администрирование
   meta http-equiv="Content-type" content="text/html; charset=utf-8"
   = stylesheet_link_tag    'admin', media: 'all'
   = javascript_include_tag 'admin'
@@ -11,7 +11,7 @@ body
   nav.navbar.navbar-inverse
     .container
       .navbar-header
-        a.navbar-brand href="#{admin_root_path}"
+        a.navbar-brand href="#{root_path}"
           = image_tag('logo.png', size: '20x20')
       ul.nav.navbar-nav
         li
