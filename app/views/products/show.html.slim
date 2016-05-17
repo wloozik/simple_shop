@@ -13,10 +13,10 @@
           span.header Описание
           span= @product.description
         p
-          span.header Вес, кг.
+          span.header Вес, кг
           span= @product.quantity
         p
-          span.header Стоимость
+          span.header Стоимость, руб
           span= @product.price
         - if current_user
           = form_for CartItem.new do |form|
