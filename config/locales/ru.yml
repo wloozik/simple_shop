@@ -11,6 +11,9 @@ ru:
         quantity: Количество
         price: Цена
         photo: Фото
+        categories: Категории
+      category:
+        title: Название
   time:
     formats:
       default: "%d/%m/%Y %H:%M:%S"
