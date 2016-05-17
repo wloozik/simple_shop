@@ -12,6 +12,9 @@
     - @products.shift(3).each do |product|
       .col-md-4
         .product
+          .product-tags
+            - product.categories.each do |category|
+              span.label.label-primary= category.title
           .product-photo
             = image_tag(product.photo.url, size: '120x120')
           .product-info
@@ -30,6 +33,3 @@
                 = form.hidden_field :product_id, value: product.id
                 = form.number_field :quantity, class: 'input quantity', min: 1, max: product.quantity, value: 1
                 = form.submit 'Добавить в корзину', class: 'btn btn-success'
-          .product-tags
-            - product.categories.each do |category|
-              span.label.label-primary= category.title
