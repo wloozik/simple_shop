@@ -25,7 +25,7 @@
               span.header Стоимость, руб:
               span= product.price
             p
-              span.header Вес, кг:
+              span.header Вес, грамм:
               span= product.quantity
             - if current_user
               = form_for CartItem.new do |form|

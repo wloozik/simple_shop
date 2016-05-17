@@ -8,8 +8,8 @@ ru:
       product:
         name: Наименование
         description: Описание
-        quantity: Вес, кг.
-        price: Цена
+        quantity: Вес, грамм
+        price: Цена, руб
         photo: Фото
         categories: Категории
       category:
