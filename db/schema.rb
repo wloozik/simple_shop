@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160506144332) do
+ActiveRecord::Schema.define(version: 20160511144428) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -56,6 +56,12 @@ ActiveRecord::Schema.define(version: 20160506144332) do
     t.integer  "status",     default: 0
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "photos", force: :cascade do |t|
+    t.integer "product_id"
+    t.string  "style"
+    t.binary  "file_contents"
   end
 
   create_table "products", force: :cascade do |t|

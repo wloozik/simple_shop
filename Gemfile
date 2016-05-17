@@ -15,6 +15,7 @@ gem 'devise'
 gem 'devise-i18n'
 gem 'kaminari'
 gem 'paperclip'
+gem 'paperclip_database', '~> 2.0'
 
 group :development do
   gem 'sqlite3'
