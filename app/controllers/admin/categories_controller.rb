@@ -39,6 +39,13 @@ class Admin::CategoriesController < AdminController
     end
   end
 
+  def destroy
+    # Удалили категорию
+    Category.find(params[:id]).destroy
+    # Переадресовали админа на страницу списка категорий
+    redirect_to admin_categories_path
+  end
+
   private
 
   def create_params
