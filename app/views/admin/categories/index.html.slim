@@ -15,3 +15,4 @@
             td= category.products.count
             td
               = link_to 'Изменить', edit_admin_category_path(category), class: 'btn btn-sm btn-warning blink'
+              = link_to 'Убрать', admin_category_path(category), method: :delete, data: { confirm: 'Вы уверены?'}, class: 'btn btn-sm btn-danger blink'
