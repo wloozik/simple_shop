@@ -16,12 +16,8 @@ class OrdersController < ApplicationController
       # Очистили корзину
       @cart.cart_items.destroy_all
       # Вернули на главную c сообщением что заказ создан
-<<<<<<< HEAD
-      redirect_to root_path, flash: { notice: 'Заказ оформлен' }
-=======
       UsersMailer.order(current_user, @order).deliver_now!
-      redirect_to root_path, flash: { notice: 'Заказ оформлен' }
->>>>>>> ea60dfc9b6080d4393a6e82f8827675eabefd23f
+      redirect_to root_path, flash: { notice: 'Заказ оформлен, ожидайте звонка оператора для подтверждения заказа' }
     else
       # Иначе просто вернули на главную
       redirect_to root_path
