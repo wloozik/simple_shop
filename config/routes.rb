@@ -5,11 +5,11 @@ Rails.application.routes.draw do
     resources :products
     resources :orders
     resources :categories
-    resources :users, only: [ :index, :show ]
+    resources :users, only: [ :index, :show, :destroy ]
     root "products#index"
   end
 
-  devise_for :users
+  devise_for :users, :controllers => { :registrations => "registrations" }
 
   resources :products, only: [:index, :show] do
     collection do

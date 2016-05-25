@@ -17,7 +17,7 @@ class OrdersController < ApplicationController
       @cart.cart_items.destroy_all
       # Вернули на главную c сообщением что заказ создан
       UsersMailer.order(current_user, @order).deliver_now!
-      redirect_to root_path, flash: { notice: 'Заказ оформлен, ожидайте звонка оператора для подтверждения заказа' }
+      redirect_to root_path, flash: { notice: 'Заказ оформлен, информация о заказе отправлена вам на электронную почту, ожидайте звонка оператора для подтверждения заказа' }
     else
       # Иначе просто вернули на главную
       redirect_to root_path

@@ -15,3 +15,6 @@
             td= user.email
             td= user.phone
             td= user.address
+            td
+              = link_to 'Убрать', admin_user_path(user), method: :delete, data: { confirm: 'Вы уверены?'}, class: 'btn btn-sm btn-danger blink'
+
