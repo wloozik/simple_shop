@@ -4,8 +4,8 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
-    <h1>Добрый день, <%= @user.name %>!</h1>
-    <p> Ваш заказ:</p>
+    <h1>Новый заказ!</h1>
+    <p> Состав заказа:</p>
     <ul>
     <%- @order.order_items.each do |item|  %>
       <li> <%= "#{item.product.name} - #{item.quantity}" %> </li>
@@ -16,11 +16,16 @@
     </p>
     ==========
     <p>
-      Ожидайте звонка оператора для подтверждения и уточнения деталей заказа!
+    <%= @user.name %>
     </p>
-    ==========
-    <p>
-    Это автоматическое сообщение. Пожалуйста, не отвечайте на него.
+     <p>
+    <%= @user.address %>
+    </p>
+     <p>
+    <%= @user.phone %>
+    </p>
+      <p>
+    <%= @user.email %>
     </p>
   </body>
 </html>
