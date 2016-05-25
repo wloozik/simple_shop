@@ -4,7 +4,7 @@
   = link_to root_path do
     h1 Пышечка
 .profile
-  a href='./contacts.html' Контакты       
+  a href='http://efremova.herokuapp.com/contacts.html' Контакты       
   - if current_user
     = current_user.email
     = link_to "Профиль", edit_user_path(current_user)
