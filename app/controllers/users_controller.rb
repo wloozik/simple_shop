@@ -12,7 +12,7 @@ class UsersController < ApplicationController
     @user.update(create_params)
     # Если обновление успешно - перешли на страницу товара в админке, иначе вернули обратно
     if @user.valid?
-      redirect_to user_path(@user)
+      redirect_to root_path
     else
       render :edit
     end
