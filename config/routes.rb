@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   end
 
   devise_for :users, :controllers => { :registrations => "registrations" }
-
+  resources :users, only: [ :edit, :update ]
   resources :products, only: [:index, :show] do
     collection do
       get 'photos/:id' => 'products#photos'

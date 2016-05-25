@@ -1,0 +1,19 @@
+.row
+  .col-md-12
+    h2 Изменить профиль
+.row
+  .col-md-4
+    = form_for @user, url: user_path(@user.id), html: { multipart: true } do |form|
+      - if @user.errors.any?
+        p.text-danger= @user.errors.full_messages.join(', ')
+      .form-group
+        = form.label(:name)
+        = form.text_field(:name, class: 'form-control')
+      .form-group
+        = form.label(:address)
+        = form.text_area(:address, class: 'form-control')
+      .form-group
+        = form.label(:phone)
+        = form.text_field(:phone, class: 'form-control')
+      .form-group
+        = form.submit 'Сохранить изменения', class: 'btn btn-success'
