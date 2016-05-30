@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     root "products#index"
   end
 
-  devise_for :users, :controllers => { :registrations => "registrations" }
+  devise_for :users, :controllers => { :registrations => "registrations", :confirmations => 'confirmations' }
   resources :users, only: [ :edit, :update ]
   resources :products, only: [:index, :show] do
     collection do

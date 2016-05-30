@@ -4,6 +4,10 @@ ru:
       messages:
         blank: Отсутствует
         not_a_number: Не число
+        confirmation: не удалось
+        taken: уже занят 
+        too_short: слишком короткий
+        password_confirmation: Подтверждение пароля  
     attributes:
       user:
         name: Имя
