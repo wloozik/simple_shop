@@ -2,8 +2,15 @@
 class CartItemsController < ApplicationController
 
   def create
-    # Добавили товар в корзину
-    CartItem.create(create_params)
+    # Ищем элемент корзины с аналогичным товаром
+    @existing_item = CartItem.find_by(cart_id: create_params[:cart_id], product_id: create_params[:product_id] )
+    # Если нашли - увеличиваем количество уже существующего элемента
+    if @existing_item.present?
+        @existing_item.update(quantity: @existing_item.quantity + create_params[:quantity].to_i)
+    # Иначе создаём новый элемент корзины
+    else
+      CartItem.create(create_params)
+    end
     # Переадресовали пользователя на страницу корзины
     redirect_to cart_path
   end
